@@ -16,7 +16,11 @@ Pod::Spec.new do |s|
 
   s.source_files = "ios/**/*.{h,m,mm}"
 
-  s.dependency "React-Core"
+  s.dependency "React"
+  s.vendored_libraries = "ios/libWeChatSDK.a"
+  s.requires_arc = true
+  s.frameworks = 'SystemConfiguration','CoreTelephony','XCTest','WebKit'
+  s.library = 'sqlite3','c++','z'
 
   # Don't install the dependencies when we run `pod install` in the old architecture.
   if ENV['RCT_NEW_ARCH_ENABLED'] == '1' then
