@@ -2,10 +2,7 @@
 #import <UIKit/UIKit.h>
 
 #import <React/RCTBridgeModule.h>
-#if !(TARGET_OS_SIMULATOR)
 #import "WXApi.h"
-#endif
-// #import "WXApi.h"
 
 // define share type constants
 #define RCTWXShareTypeNews @"news"

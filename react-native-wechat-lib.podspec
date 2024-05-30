@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.source_files = "ios/**/*.{h,m,mm}"
 
   s.dependency "React"
-  # s.vendored_libraries = "ios/libWeChatSDK.a"
+  s.vendored_libraries = "ios/libWeChatSDK.a"
   s.requires_arc = true
   s.frameworks = 'SystemConfiguration','CoreTelephony','XCTest','WebKit'
   s.library = 'sqlite3','c++','z'
@@ -36,7 +36,4 @@ Pod::Spec.new do |s|
     s.dependency "RCTTypeSafety"
     s.dependency "ReactCommon/turbomodule/core"
   end
-  s.xcconfig = {
-    'OTHER_LDFLAGS[sdk=iphoneos*]' => '$(inherited) -L$(PROJECT_DIR)/../node_modules/react-native-wechat-lib/ios -libWeChatSDK'
-  }
 end

@@ -34,5 +34,4 @@ Pod::Spec.new do |s|
   s.vendored_libraries = "libWeChatSDK.a"
   s.ios.frameworks = 'SystemConfiguration','CoreTelephony','XCTest','WebKit'
   s.ios.library = 'sqlite3','c++','z'
-
 end
